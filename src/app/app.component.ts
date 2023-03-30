@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public appPages = [
     { title: 'Dashboard', url: 'dashboard', icon: 'stats-chart'},
-    { title: 'Data Induk', url: 'datainduk', icon: 'newspaper' 
+    { title: 'Data Induk', url: 'datainduk', icon: 'newspaper'
     /*  subPages: [
       { title: 'Data Toko', url: 'datainduk' },
       { title: 'Registrasi' },
@@ -16,36 +16,39 @@ export class AppComponent {
       { title: 'Monitoring' }]
     */
     },
-    { title: 'Petugas', url: 'tabel', icon: 'person' 
+    {
+      title: 'Bedak', url: 'bedak', icon: 'storefront'
+    },
+    { title: 'Petugas', url: 'tabel', icon: 'person'
     /*  subPages: [
       { title: 'Kantor' },
       { title: 'Karcis' }]
     */
     },
-    { title: 'Karcis', url: '#', icon: 'create' 
+    { title: 'Karcis', url: '#', icon: 'create'
     /*  subPages: [
       { title: 'Stok' },
       { title: 'Pengambilan' },
-      { title: 'Setoran' }] 
+      { title: 'Setoran' }]
       */
     },
-    { title: 'Keuangan', url: '#', icon: 'wallet' 
+    { title: 'Keuangan', url: '#', icon: 'wallet'
     /*  subPages: [
       { title: 'Jurnal' },
-      { title: 'Laporan' }] 
+      { title: 'Laporan' }]
     */
     },
-    { title: 'User', url: '#', icon: 'person-circle' 
+    { title: 'User', url: '#', icon: 'person-circle'
     /*  subPages: [
       { title: 'Data' },
-      { title: 'Hak Akses' }] 
+      { title: 'Hak Akses' }]
     */
     },
-    { title: 'Referensi', url: '#', icon: 'reorder-three' 
+    { title: 'Referensi', url: '#', icon: 'reorder-three'
     /*  subPages: [
       { title: 'Jabatan' },
       { title: 'Jenis Toko' },
-      { title: 'Jenis Karcis' }] 
+      { title: 'Jenis Karcis' }]
     */
     },
     { title: 'Layout', url: '/folder/Layout', icon: 'earth' }
@@ -56,6 +59,6 @@ export class AppComponent {
 
   toggleSubMenu() {
     this.showSubMenu = !this.showSubMenu;
-  }  
+  }
   constructor() {}
 }

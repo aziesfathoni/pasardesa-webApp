@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'datainduk',
     loadChildren: () => import('./datainduk/datainduk.module').then( m => m.DataindukPageModule)
-  }
+  },
+  {
+    path: 'bedak',
+    loadChildren: () => import('./bedak/bedak.module').then( m => m.BedakPageModule)
+  },
 ];
 
 @NgModule({
