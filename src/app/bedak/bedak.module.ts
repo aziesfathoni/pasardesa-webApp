@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { BedakPageRoutingModule } from './bedak-routing.module';
 
 import { BedakPage } from './bedak.page';
+import { BedakService } from './bedak.service';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { BedakPage } from './bedak.page';
     IonicModule,
     BedakPageRoutingModule
   ],
-  declarations: [BedakPage]
+  declarations: [BedakPage],
+  providers: [BedakService]
 })
 export class BedakPageModule {}

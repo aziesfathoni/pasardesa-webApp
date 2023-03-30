@@ -1,17 +1,17 @@
 <ion-app auto-hide="true" >
   <ion-split-pane contentId="main-content" >
-  
-    <ion-menu contentId="main-content" type="overlay" > 
+
+    <ion-menu contentId="main-content" type="overlay" style="width: 25%;">
       <ion-content>
         <h2><b><i>Pasar Sumberrejo Matoh</i></b></h2>
         <!--<img src="assets/pasar.jpg"/>-->
-               
+
         <ion-list id="dashboard-list" >
-          <!-- 
+          <!--
           <ion-list-header>SUMBERREJO</ion-list-header>
-          <ion-note>pasar desa</ion-note> 
+          <ion-note>pasar desa</ion-note>
           -->
-          
+
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index" >
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"  routerLinkActive="selected" >
               <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
@@ -31,7 +31,7 @@
           </ion-menu-toggle>
         </ion-list>
 
-        <!-- 
+        <!--
         <ion-list id="labels-list">
           <ion-list-header>Labels</ion-list-header>
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BedakService } from './bedak.service';
 
 @Component({
   selector: 'app-bedak',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BedakPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private bedakService: BedakService
+  ) { }
+  data: any;
 
   ngOnInit() {
+    this.bedakService.getData().subscribe((x) => {
+      this.data = x.data
+    })
   }
 
 }
