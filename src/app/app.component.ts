@@ -7,44 +7,46 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public appPages = [
     { title: 'Dashboard', url: 'dashboard', icon: 'stats-chart'},
+    /*
     { title: 'Data Induk', url: 'datainduk', icon: 'newspaper'
-    /*  subPages: [
+      subPages: [
       { title: 'Data Toko', url: 'datainduk' },
       { title: 'Registrasi' },
       { title: 'Mutasi' },
       { title: 'Angsuran Sewa' },
       { title: 'Monitoring' }]
+  
+    },
     */
-    },
     {
-      title: 'Bedak', url: 'bedak', icon: 'storefront'
+      title: 'Data Induk', url: 'bedak', icon: 'storefront'
     },
-    { title: 'Petugas', url: 'tabel', icon: 'person'
+    { title: 'Petugas', url: 'pegawai', icon: 'person'
     /*  subPages: [
       { title: 'Kantor' },
       { title: 'Karcis' }]
     */
     },
-    { title: 'Karcis', url: '#', icon: 'create'
+    { title: 'Karcis', url: 'karcis', icon: 'create'
     /*  subPages: [
       { title: 'Stok' },
       { title: 'Pengambilan' },
       { title: 'Setoran' }]
       */
     },
-    { title: 'Keuangan', url: '#', icon: 'wallet'
+    { title: 'Keuangan', url: 'keuangan', icon: 'wallet'
     /*  subPages: [
       { title: 'Jurnal' },
       { title: 'Laporan' }]
     */
     },
-    { title: 'User', url: '#', icon: 'person-circle'
+    { title: 'User', url: 'user', icon: 'person-circle'
     /*  subPages: [
       { title: 'Data' },
       { title: 'Hak Akses' }]
     */
     },
-    { title: 'Referensi', url: '#', icon: 'reorder-three'
+    { title: 'Referensi', url: 'referensi', icon: 'reorder-three'
     /*  subPages: [
       { title: 'Jabatan' },
       { title: 'Jenis Toko' },

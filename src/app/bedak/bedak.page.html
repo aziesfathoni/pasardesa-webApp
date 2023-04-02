@@ -1,10 +1,37 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>bedak</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Data Induk Pedagang Pasar</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-tabs>
+        <!-- Tab bar -->
+      <ion-tab-bar slot="top">
+        <ion-tab-button tab="account">
+          <ion-icon name="albums"></ion-icon>
+          Data KTHP
+        </ion-tab-button>
+        <ion-tab-button tab="account">
+          <ion-icon name="person"></ion-icon>
+          Registrasi
+        </ion-tab-button>
+        <ion-tab-button tab="contact">
+          <ion-icon name="trail-sign"></ion-icon>
+          Mutasi
+        </ion-tab-button>
+        <ion-tab-button tab="settings">
+          <ion-icon name="create"></ion-icon>
+          Angsuran
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  
+  </ion-item>  
   <div class="flex flex-col">
     <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
       <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
@@ -12,23 +39,25 @@
           <table class="min-w-full">
             <thead class="bg-white border-b">
               <tr>
-                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">No. KTHP</th>
-                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">No. Bedak</th>
-                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Nama Bedak</th>
-                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Kode Pedagang</th>
-                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Nama Pedagang</th>
-                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Listrik</th>
-                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Dagangan</th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">No.</th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">No. KTHP</th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">No. Bedak</th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">Jenis</th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">Kode Pedagang</th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">Nama Pedagang</th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">Listrik</th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">Dagangan</th>
               </tr>
             </thead>
             <tbody>
               <tr class="bg-gray-100 border-b" *ngFor="let item of data">
-                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">{{ item.no_kthp }}</td>
-                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">{{ item.no_bedak }}</td>
+                <td> </td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center">{{ item.no_kthp }}</td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center">{{ item.no_bedak }}</td>
                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">{{ item.nama_bedak }}</td>
-                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">{{ item.kd_pedagang }}</td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center">{{ item.kd_pedagang }}</td>
                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">{{ item.nama_pedagang }}</td>
-                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">{{ item.listrik }}</td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center">{{ item.listrik }}</td>
                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">{{ item.dagangan }}</td>
               </tr>
             </tbody>

@@ -1,0 +1,84 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Data Pegawai / Petugas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-tabs>
+        <!-- Tab bar -->
+      <ion-tab-bar slot="top">
+        <ion-tab-button tab="account">
+          <ion-icon name="albums"></ion-icon>
+          Data Pegawai
+        </ion-tab-button>
+        <ion-tab-button tab="account">
+          <ion-icon name="person"></ion-icon>
+          Input
+        </ion-tab-button>
+        
+      </ion-tab-bar>
+    </ion-tabs>
+  
+  </ion-item>  
+  <div class="flex flex-col">
+    <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
+      <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+        <div class="overflow-hidden">
+          <table class="min-w-full">
+            <thead class="bg-white border-b">
+              <tr>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">No</th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Kode</th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Jabatan</th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Nama Pegawai</th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">No HP</th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Alamat</th>
+              </tr>
+            </thead>
+            
+            <tbody>
+              <tr class="bg-gray-100 border-b" *ngFor="let item of data">
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">{{ item.kd_pegawai }}</td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">{{ item.nama_jabatan }}</td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">{{ item.nama_pegawai }}</td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">{{ item.no_hp }}</td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">{{ item.alamat_pegawai }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <table>
+    <thead>
+      <tr>
+        <th>No. KTHP</th>
+        <th>No. Bedak</th>
+        <th>Nama Bedak</th>
+        <th>Kode Pedagang</th>
+        <th>Nama Pedagang</th>
+        <th>Listrik</th>
+        <th>Dagangan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data">
+        <td>{{ item.no_kthp }}</td>
+        <td>{{ item.no_bedak }}</td>
+        <td>{{ item.nama_bedak }}</td>
+        <td>{{ item.kd_pedagang }}</td>
+        <td>{{ item.nama_pedagang }}</td>
+        <td>{{ item.listrik }}</td>
+        <td>{{ item.dagangan }}</td>
+      </tr>
+    </tbody>
+  </table> -->
+</ion-content>

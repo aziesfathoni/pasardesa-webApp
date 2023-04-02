@@ -22,7 +22,15 @@ const routes: Routes = [
   {
     path: 'bedak',
     loadChildren: () => import('./bedak/bedak.module').then( m => m.BedakPageModule)
+  },  {
+    path: 'pegawai',
+    loadChildren: () => import('./pegawai/pegawai.module').then( m => m.PegawaiPageModule)
   },
+  {
+    path: 'karcis',
+    loadChildren: () => import('./karcis/karcis.module').then( m => m.KarcisPageModule)
+  },
+
 ];
 
 @NgModule({
