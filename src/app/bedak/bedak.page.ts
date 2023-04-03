@@ -11,11 +11,21 @@ export class BedakPage implements OnInit {
   constructor(
     private bedakService: BedakService
   ) { }
-  data: any;
+  data: Array<any> = [];
+  isLoading: boolean = false;
 
   ngOnInit() {
-    this.bedakService.getData().subscribe((x) => {
-      this.data = x.data
+    this.getData()
+  }
+
+  getData(){
+    this.isLoading = true;
+    this.bedakService.getData().subscribe((response) => {
+      this.isLoading = false
+      this.data = response.data
+    }, (error) => {
+      this.isLoading = false
+      this.data = []
     })
   }
 
