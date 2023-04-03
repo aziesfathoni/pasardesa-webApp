@@ -30,8 +30,8 @@
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
-  
-  </ion-item>  
+
+  </ion-item>
   <div class="flex flex-col">
     <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
       <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
@@ -50,8 +50,8 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="bg-gray-100 border-b" *ngFor="let item of data">
-                <td> </td>
+              <tr *ngFor="let item of data; let idx = index;" [class.bg-gray-100]="idx % 2 === 0" class="hover:bg-gray-200 cursor-default">
+                <td>{{idx + 1}}</td>
                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center">{{ item.no_kthp }}</td>
                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center">{{ item.no_bedak }}</td>
                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">{{ item.nama_bedak }}</td>
@@ -59,6 +59,9 @@
                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">{{ item.nama_pedagang }}</td>
                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center">{{ item.listrik }}</td>
                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">{{ item.dagangan }}</td>
+              </tr>
+              <tr *ngIf="(data)?.length == 0">
+                <td colspan="8" class="px-4 py-2 text-center text-gray-700">No Data Available</td>
               </tr>
             </tbody>
           </table>
