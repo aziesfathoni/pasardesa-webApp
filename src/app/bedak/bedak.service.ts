@@ -11,8 +11,8 @@ export class BedakService {
     private http: HttpClient
   ) { }
 
-  getData():Observable<any>{
-    const url = 'http://localhost:3000/api/bedak';
+  getData(params: {pageNumber: number, pageSize: number}):Observable<any>{
+    const url = `http://localhost:3000/api/bedak?pageNumber=${params.pageNumber}&pageSize=${params.pageSize}`;
     return this.http.get(url);
   }
 }

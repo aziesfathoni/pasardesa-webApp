@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InfiniteScrollCustomEvent } from '@ionic/angular';
 import { BedakService } from './bedak.service';
 
 @Component({
@@ -13,6 +14,9 @@ export class BedakPage implements OnInit {
   ) { }
   data: Array<any> = [];
   isLoading: boolean = false;
+  isNextPage: boolean = false;
+  pageNumber: number = 1;
+  pageSize: number = 25;
 
   ngOnInit() {
     this.getData()
@@ -20,13 +24,24 @@ export class BedakPage implements OnInit {
 
   getData(){
     this.isLoading = true;
-    this.bedakService.getData().subscribe((response) => {
+    this.bedakService.getData({pageNumber: this.pageNumber, pageSize: this.pageSize}).subscribe((response) => {
+      console.log("response",response)
       this.isLoading = false
-      this.data = response.data
+      response.data.forEach((element: any) => {
+        this.data.push(element)
+      });
+      this.isNextPage = response.next
+      this.pageNumber = response.pageNumber
     }, (error) => {
       this.isLoading = false
       this.data = []
     })
+  }
+
+  onIonInfinite(ev: any) {
+    console.log("scroll")
+    this.pageNumber = this.pageNumber + 1
+    this.getData()
   }
 
 }
