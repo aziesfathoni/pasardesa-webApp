@@ -11,8 +11,8 @@ export class PegawaiService {
     private http: HttpClient
   ) { }
 
-  getData():Observable<any>{
-    const url = 'http://localhost:3000/api/pegawai';
+  getData(params: {pageNumber: number, pageSize: number}):Observable<any>{
+    const url = `http://localhost:3000/api/pegawai?pageNumber=${params.pageNumber}&pageSize=${params.pageSize}`;
     return this.http.get(url);
   }
 }

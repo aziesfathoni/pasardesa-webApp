@@ -61,7 +61,7 @@
               </ng-container>
               <ng-template #tableContent>
                 <tr *ngFor="let item of data; let idx = index;" [class.bg-gray-100]="idx % 2 === 0" class="hover:bg-gray-200 cursor-default">
-                  <td>{{idx + 1}}</td>
+                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center">{{idx + 1}}</td>
                   <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center">{{ item.no_kthp }}</td>
                   <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center">{{ item.no_bedak }}</td>
                   <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">{{ item.nama_bedak }}</td>

@@ -16,7 +16,7 @@ export class BedakPage implements OnInit {
   isLoading: boolean = false;
   isNextPage: boolean = false;
   pageNumber: number = 1;
-  pageSize: number = 25;
+  pageSize: number = 50;
 
   ngOnInit() {
     this.getData()
